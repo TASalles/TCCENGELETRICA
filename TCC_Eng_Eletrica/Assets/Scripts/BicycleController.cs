@@ -37,6 +37,10 @@ public class BicycleController : MonoBehaviour
     private void FixedUpdate()
     {
         //BICYCLE MOVEMENT
+        forwardAxis = Input.GetAxis("Vertical");
+        turnAxis = Input.GetAxis("Horizontal");
+        brakeAxis = Input.GetAxis("Jump");
+
         wheelFL.steerAngle = maxSteerAngle * turnAxis;
         wheelFR.steerAngle = maxSteerAngle * turnAxis;
 
@@ -79,12 +83,6 @@ public class BicycleController : MonoBehaviour
 
     private void Update()
     {
-        //BICYCLE MOVEMENT
-        forwardAxis = Input.GetAxis("Vertical");
-        turnAxis = Input.GetAxisRaw("HorizontalJoystick");
-        Debug.Log(turnAxis);
-        brakeAxis = Input.GetAxis("Jump");
-
         //Quaternion fq; //rotation and position of wheel collider
         //Vector3 fv;
         //wheelFL.GetWorldPose(out fv, out fq); //get wheel collider position and rotation
@@ -98,7 +96,5 @@ public class BicycleController : MonoBehaviour
         //BL.transform.rotation = bq;
 
         //Debug.Log("" + fq + ", " + bq);
-
-
     }
 }
