@@ -10,7 +10,12 @@ ModelImporter:
     3300000: //RootNode
     4300000: Calcada_c_asfalto1
     6400000: //RootNode
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert6
+    second: {fileID: 2100000, guid: f5ada1b6ba3f48c4aa6199c9ade2335d, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
